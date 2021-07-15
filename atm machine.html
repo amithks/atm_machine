@@ -4,102 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ATM Machine</title>
-    <link rel="stylesheet" href="/css/stylesheet.css">
-    <style type="text/css">
-      #header{
-        background:blue;
-        text-align:center;
-        margin: -8px;
-        height: 90px;
-        font-size: 400%;
-        font-weight:bold;
-      }
-      #section{
-        margin-top: 30px;
-        text-align:center;
-      }
-      #main{
-        position: fixed;
-        width: 1800px;
-        height: 400px;
-        margin:-8px;
-        background-color: #7A564E;
-      }
-      .left-section{
-        position:relative;
-        width: 500px;
-        height: 360px;
-        padding-top: 15px;
-        margin-left: 50px;
-        margin-top: 10px;
-        background-color: white;
-        border-radius: 10px;
-      }
-      #welcome-text{
-        font-size: 200%;
-        font-weight: bold;
-        text-align: center;
-      }
-      #enter{
-        margin-left: 50px;
-        positon:absolute;
-        font-size: 30px;
-      }
-      input{
-        position:relative;
-        margin-top: 10px;
-        width: 400px;
-        height: 100px;
-      }
-      button{
-        position: relative;
-        margin-top: 10px;
-        width: 408px;
-        height: 50px;
-        font-size: 30px;
-        background-color: #0000FF;
-        color:white;
-      }
-      button:hover{
-        background-color: #00008B;
-      }
-      .right-section{
-        position:relative;
-        border-radius: 10px;
-        width: 750px;
-        height: 369px;
-        background-color: white;
-        margin-left: 530px;
-        margin-top: -354px;
-      }
-      #right-amount{
-        positon:relative;
-        font-size: 20px;
-        margin-left: 5px;
-      }
-      .inside{
-        width: 700px;
-        height: 368px;
-        margin-left: 25px;
-        margin-top: -355px;
-        padding-top: 1px;
-      }
-      #denomination{
-        position:absolute;
-        width: 350px;
-        height: 268px;
-      }
-      .inside-right{
-        margin-left: 350px;
-        margin-top: -276px;
-        padding-top: 8px;
-        width: 350px;
-        height: 268px;
-      }
-      #total-notes{
-        margin-top: -3px;
-      }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
     <div id = header>
@@ -144,50 +49,8 @@
             </div>
       </div>
     </div>
-    <script type="text/javascript">
-      document.getElementById("get-money").onclick = function(){
-          var amount = document.getElementById("entered-amount").value;
-            var amt1 = amount/2000;
-            document.getElementById('note-2000').innerHTML = Math.floor(amt1) + document.getElementById('note-2000').innerHTML;
-            var amt2 = amount - (Math.floor(amt1) * 2000);
-            var amt3 = amt2/500;
-            document.getElementById('note-500').innerHTML = Math.floor(amt3) + document.getElementById('note-500').innerHTML;
-            var amt4 = amt2 - (Math.floor(amt3) * 500);
-            var amt5 = amt4/200;
-            document.getElementById('note-200').innerHTML = Math.floor(amt5) + document.getElementById('note-200').innerHTML;
-            var amt6 = amt4 - (Math.floor(amt5) * 200);
-            var amt7 = amt6/100;
-            document.getElementById('note-100').innerHTML = Math.floor(amt7) + document.getElementById('note-100').innerHTML;
-            var amt8 = amt6 - (Math.floor(amt7) * 100);
-            var amt9 = amt8/50;
-            document.getElementById('note-50').innerHTML = Math.floor(amt9) + document.getElementById('note-50').innerHTML;
-            var amt10 = amt8 - (Math.floor(amt9) * 50);
-            var amt11 = amt10/20;
-            document.getElementById('note-20').innerHTML = Math.floor(amt11) + document.getElementById('note-20').innerHTML;
-            var amt12 = amt10 - (Math.floor(amt11) * 20);
-            var amt13 = amt12/10;
-            document.getElementById('note-10').innerHTML = Math.floor(amt13) + document.getElementById('note-10').innerHTML;
-            var amt14 = amt12 - (Math.floor(amt13) * 10);
-            var amt15 = amt14/5;
-            document.getElementById('note-5').innerHTML = Math.floor(amt15) + document.getElementById('note-5').innerHTML;
-            var amt16 = amt14 - (Math.floor(amt15) * 5);
-            var amt17 = amt16/2;
-            document.getElementById('note-2').innerHTML = Math.floor(amt17) + document.getElementById('note-2').innerHTML;
-            var amt18 = amt16 - (Math.floor(amt16) * 2);
-            if (amt18 < 0){
-              if ((amt18 %2) == 0){
-                amt18 = 0;
-              }
-              else {
-                amt18 = 1;
-              }
-            }
-            var amt19 = amt18/1;
-            document.getElementById('note-1').innerHTML = Math.floor(amt19) + document.getElementById('note-1').innerHTML;
-            var amt20 = amt18 - (Math.floor(amt19) * 1);
-            var notes = (Math.floor(amt1)+ Math.floor(amt3)+ Math.floor(amt5)+ Math.floor(amt7)+ Math.floor(amt9)+ Math.floor(amt11)+ Math.floor(amt13)+ Math.floor(amt15)+ Math.floor(amt17)+ Math.floor(amt19));
-            document.getElementById('total-notes').innerHTML = document.getElementById('total-notes').innerHTML + notes ;
-      };
+    <script src="script.js">
+      
     </script>
   </body>
 </html>
